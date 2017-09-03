@@ -41,9 +41,6 @@ all: $(BUILD_DIRS) $(DEPS) $(addprefix $(BINDIR)/, $(TARGET))
 clean:
 	$(RM) -r $(BUILD_DIRS)
 	$(RM) $(DEPS)
-	$(RM) gmon.out hw2.profile
-	$(RM) hw2.out hw2.time hw2.vM.dump
-	$(RM) -r analysis
 
 $(LIBDIR)/%.o: $(SRCDIR)/%.c
 	$(CC) -c $(CFLAGS) -o $@ $<
